@@ -1,37 +1,42 @@
 #!/usr/bin/env bash
 #
-# script_name.sh - Brief description
+# list_users.sh - Will extract the users from /etc/passwd
 #
-# Site:       blabla
+# Site:       https://www.linkedin.com/in/mateusrissi/
 # Autor:      Mateus Rissi
 # Manutenção: Mateus Rissi
 #
 # ------------------------------------------------------------------------ #
-#  Description
+#  This script will extract the users from /etc/passwd with the options to
+#  turn them uppercase and to put them into alphabetical order.
 #
 #  Examples:
-#      $ ./script_name.sh -d 1
-#      Command description.
+#      $ ./list_users.sh -s -m
+#      -s flag will put them into alphabetical order and -m will turn them
+#      uppercase.
 # ------------------------------------------------------------------------ #
 # History:
 #
-#   v1.0 03/10/2019, Mateus:
+#   v1.0 22/11/2019, Mateus:
 #       - Start
 #       - Funcionalities
-#   v1.1 10/10/2019, Mateus:
-#       - Modified functions bip bop
 # ------------------------------------------------------------------------ #
 # Tested on:
 #   bash 4.4.20
 # ------------------------------------------------------------------------ #
-# Thanks:
-#
-# 	Bip - Found a bug at the login snippet.
-#	Bop - Suggested the addition of -h at the script calling.
-# ------------------------------------------------------------------------ #
 
 # ------------------------------- VARIABLES ------------------------------ #
+USERS="$(cat /etc/passwd | cut -d : -f 1)"
+HELP_MESSAGE="
+    $(basename($0)) - [OPTIONS]
 
+    -h - Help menu
+    -v - Version
+    -s - Put output into alphabetical order
+    -m - Turn uppercase the output
+"
+
+VERSION="v1.0.0"
 # ------------------------------------------------------------------------ #
 
 # ------------------------------- TESTS ---------------------------------- #

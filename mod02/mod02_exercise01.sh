@@ -4,9 +4,9 @@
 #
 # Site:       https://4fasters.com.br/
 #             https://www.linkedin.com/in/mateusrissi/
-# Autor:      Mateus Müller
+# Author:     Mateus Müller
 #             Mateus Rissi
-# Manutenção: Mateus Rissi
+# Maintainer: Mateus Rissi
 #
 # ------------------------------------------------------------------------ #
 #  This script will test if the start variable is greater or equal to the 

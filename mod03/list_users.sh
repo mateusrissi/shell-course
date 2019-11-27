@@ -3,8 +3,8 @@
 # list_users.sh - Will extract the users from /etc/passwd
 #
 # Site:       https://www.linkedin.com/in/mateusrissi/
-# Autor:      Mateus Rissi
-# Manutenção: Mateus Rissi
+# Author:     Mateus Rissi
+# Maintainer: Mateus Rissi
 #
 # ------------------------------------------------------------------------ #
 #  This script will extract the users from /etc/passwd with the options to

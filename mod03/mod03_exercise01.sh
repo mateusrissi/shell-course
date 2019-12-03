@@ -16,7 +16,7 @@
 # --------------------------------------------------------------------------- #
 # History:
 #
-#   v1.0 27/11/2019, Mateus:
+#   v1.0 03/12/2019, Mateus:
 #       - Start
 #       - Funcionalities
 #
@@ -29,7 +29,7 @@
 # -------------------------------- VARIABLES -------------------------------- #
 FOLDERS="Compressed Documents Images Music Videos"
 
-declare -A extensionsDic=(
+declare -A EXTENSIONS_DIC=(
     ["Compressed"]="*.7z *.arj *.deb *.pkg *.rar *.rpm *.tar.gz *.zip *.z"
     ["Documents"]="*.ppt *.pptx *.odp *.xls *.xlsx *.ods *.doc *.docx \
                    *.odt *.pdf *.rtf *.txt"
@@ -48,16 +48,22 @@ fi
 # -------------------------------- FUNCTIONS -------------------------------- #
 organizer() {
     for i in ${FOLDERS[@]}; do
-        for line in `ls ${DIR} | sed '/extensionsDic[${i}]/p'`; do
-            mv ${DIR}${line} "${DIR}${i}/"
+        for ext in ${EXTENSIONS_DIC[${i}]}; do
+            for line in `ls ${DIR} | grep ${ext}`; do
+                mv "${DIR}${line}" "${DIR}${i}"
+            done
         done
     done
 }
 
-main() {
+folder_creater() {
     for i in ${FOLDERS[@]}; do
         [[ -d "${DIR}${i}" ]] || mkdir "${DIR}${i}"
     done
+}
+
+main() {
+    folder_creater
     organizer
     echo "Successfully organized the directory!"
 }

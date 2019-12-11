@@ -38,17 +38,20 @@
 DEBUGGING_KEY=0
 DEBUGGING_LEVEL=0
 
+PURPLE="\033[35;1m"
+CYAN="\033[36;1m"
+
 # -------------------------------- FUNCTIONS -------------------------------- #
 Debugging() {
-    [ "${1}" -le "${DEBUGGING_LEVEL}" ] && echo "Debugging ${*} -----"
+    [ "${1}" -le "${DEBUGGING_LEVEL}" ] && echo -e "${2}Debugging ${*} -----"
 }
 
 Sum() {
     local total=0
     for i in $(seq 1 25); do
-        Debugging 1 "Entered with value: ${i}"
+        Debugging 1 ${PURPLE} "Entered with value: ${i}"
         total=$((${total}+${i}))
-        Debugging 2 "After Sum: ${total}"
+        Debugging 2 ${CYAN} "After Sum: ${total}"
     done
     echo ${total}
 }

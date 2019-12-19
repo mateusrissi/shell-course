@@ -1,0 +1,5 @@
+# uppercase on 1, 0 off
+USE_UPPERCASE=1
+
+# color on 1, 0 off
+USE_COLORS=1

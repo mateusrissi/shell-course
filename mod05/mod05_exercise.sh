@@ -64,7 +64,7 @@ RED="\033[31;1m"
 GREEN="\033[32;1m"
 YELLOW="\033[33;1m"
 
-# ---------------------------------- TESTS ---------------------------------- #
+# TESTS
 while test -n "${1}"; do
     case "${1}" in
         -h) echo "${HELP_MESSAGE}" && exit 0                           ;;
@@ -84,7 +84,7 @@ if [[ $(ls ${DIR} | wc -l) -eq 0 ]]; then
     echo -e "${YELLOW}There are no files in the specified folder" && exit 0
 fi
 
-# -------------------------------- FUNCTIONS -------------------------------- #
+# FUNCTIONS
 organizer() {
     for i in ${FOLDERS[@]}; do
         for ext in ${EXTENSIONS_DIC[${i}]}; do
@@ -111,6 +111,6 @@ main() {
     echo -e "${GREEN}Successfully organized the directory!"
 }
 
-# ----------------------------------- EXEC ---------------------------------- #
+# EXEC
 
 main

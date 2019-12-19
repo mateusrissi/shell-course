@@ -1,0 +1,2 @@
+# print the 4Fasters art at the end; 1 for on; 0 for off
+PRINT_4FASTERS_ART=1

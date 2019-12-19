@@ -14,7 +14,7 @@
 #      It will extract the titles from the website and show them on the screen.
 
 # History:
-#   v1.0.0 03/10/2019, Mateus:
+#   v1.0.0 18/12/2019, Mateus:
 #       - Start
 #       - Funcionalities
 

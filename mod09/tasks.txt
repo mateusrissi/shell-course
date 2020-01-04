@@ -1,0 +1,9 @@
+
+#id|what|day|hour|where
+
+id_1|Walk the dog|EVERYDAY|7:00|Central Park
+id_2|Buy office equipaments|02-01-2020|9:00|Chik's Goods
+id_3|Go grocery shopping|04-01-2020|17:00|Lorenzo's Market
+id_4|Hit the gym (YEAH!)|EVERYDAY|8:00|Bulk Gym
+
+#tasks list

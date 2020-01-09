@@ -31,9 +31,9 @@ GREEN="\033[32;1m"
 CYAN="\033[36;1m"
 
 # TESTS
-[ ! -f "$DATABASE_FILE" ] && echo "ERROR. File does not exist." && exit 1
-[ ! -r "$DATABASE_FILE" ] && echo "ERROR. You do not have the permission to read the file." && exit 1
-[ ! -w "$DATABASE_FILE" ] && echo "ERROR. You do not have the permission to write at the file." && exit 1
+[ ! -f "${DATABASE_FILE}" ] && echo "ERROR. File does not exist." && exit 1
+[ ! -r "${DATABASE_FILE}" ] && echo "ERROR. You do not have the permission to read the file." && exit 1
+[ ! -w "${DATABASE_FILE}" ] && echo "ERROR. You do not have the permission to write at the file." && exit 1
 
 # FUNCTIONS
 showUser() {
